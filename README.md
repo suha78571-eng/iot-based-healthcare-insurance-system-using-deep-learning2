@@ -1,13 +1,10 @@
 # iot-based-healthcare-insurance-system-using-deep-learning2
 An IoT-based healthcare insurance management system using deep learning (TabNet) for accurate, transparent risk and cost prediction.
 
-
-
-Importance of the Project
+<b>Importance of the Project</b>
 This work is of importance to modern health insurance systems as a pressing requirement to ensure that good, transparent, and intelligent management decisions are made. However, traditional analytical approaches are inadequate for predicting insurance costs and risks, and the scale of the healthcare data explosion and the growth of insurance offerings are growing rapidly. By leveraging IoT (Internet of Things) and deep learning, the proposed system can continuously analyse demographic and behavioural characteristics that influence healthcare expenditures. The TabNet model is a relevant and meaningful class of models because it achieves high prediction accuracy and can be interpreted as an attention-based feature selection mechanism that complies with rules and trust insurance players. And the project also enables better premium pricing, risk stratification, and the evaluation of agent performance towards fairer and smarter insurance policies. In summary, this project presents an improved smart healthcare insurance management system that combines accuracy, transparency, and scalability within a single integrated framework.
 
-
-Milestone 1 (M1): IoT Data Collection
+<h1>Milestone 1 (M1): IoT Data Collection</h1>
 UC ID	Actor	Description	Trigger	Main Flow
 UC-M1-1	IoT Device / App	Collect healthcare and lifestyle data	Data generation event	An IoT device captures data and sends it to gateway
 UC-M1-2	System	Receive IoT data	Incoming IoT request	Data is accepted and queued for ingestion
