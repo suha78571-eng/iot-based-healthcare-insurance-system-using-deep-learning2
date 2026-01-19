@@ -3,7 +3,7 @@ An IoT-based healthcare insurance management system using deep learning (TabNet)
 
 <b>Importance of the Project</b>
 This work is of importance to modern health insurance systems as a pressing requirement to ensure that good, transparent, and intelligent management decisions are made. However, traditional analytical approaches are inadequate for predicting insurance costs and risks, and the scale of the healthcare data explosion and the growth of insurance offerings are growing rapidly. By leveraging IoT (Internet of Things) and deep learning, the proposed system can continuously analyse demographic and behavioural characteristics that influence healthcare expenditures. The TabNet model is a relevant and meaningful class of models because it achieves high prediction accuracy and can be interpreted as an attention-based feature selection mechanism that complies with rules and trust insurance players. And the project also enables better premium pricing, risk stratification, and the evaluation of agent performance towards fairer and smarter insurance policies. In summary, this project presents an improved smart healthcare insurance management system that combines accuracy, transparency, and scalability within a single integrated framework.
-
+-----------------
 <h1>Milestone 1 (M1): IoT Data Collection</h1>
 UC ID	Actor	Description	Trigger	Main Flow
 UC-M1-1	IoT Device / App	Collect healthcare and lifestyle data	Data generation event	An IoT device captures data and sends it to gateway
@@ -18,7 +18,7 @@ IoT -> Gateway : Send health & lifestyle data
 Gateway -> RawDB : Store raw data
 RawDB -> Gateway : ACK
 @enduml
-
+--------------------------
 Milestone 2 (M2): Data Validation & Ingestion
 UC ID	Actor	Description	Trigger	Main Flow
 UC-M2-1	System	Validate incoming data	Data received	Check format, ranges, and consistency
@@ -36,7 +36,7 @@ RawDB -> Validate : Provide data
 Validate -> Validate : Validate format & ranges
 Validate -> ValidDB : Store validated data
 @enduml
-
+--------------------------------
 
 Milestone 3 (M3): Data Preprocessing
 UC ID	Actor	Description	Trigger	Main Flow
@@ -55,7 +55,7 @@ ValidDB -> Prep : Provide dataset
 Prep -> Prep : Clean missing values
 Prep -> ProcDB : Save cleaned data
 @enduml
-
+---------------------------------
 
 Milestone 4 (M4): Feature Engineering
 UC ID	Actor	Description	Trigger	Main Flow
@@ -73,9 +73,7 @@ ProcDB -> FE : Provide features
 FE -> FE : Encode & scale features
 FE -> FeatureDB : Save engineered features
 @enduml
-
-
-
+---------------------------------------
 
 Milestone 5 (M5): Dataset Partitioning
 UC ID	Actor	Description	Trigger	Main Flow
@@ -92,8 +90,7 @@ System -> FeatureDB : Load feature dataset
 FeatureDB -> Split : Provide data
 Split -> Sets : Create stratified train/test sets
 @enduml
-
-
+-----------------------------------------------
 Milestone 6 (M6): Model Initialization
 UC ID	Actor	Description	Trigger	Main Flow
 UC-M6-1	System	Configure TabNet hyperparameters	Model setup request	Load architecture and parameters
@@ -107,7 +104,7 @@ participant "TabNet Model" as TabNet
 System -> Config : Load hyperparameters
 Config -> TabNet : Initialize TabNet architecture
 @enduml
-
+-------------------------------------------------
 
 
 Milestone 7 (M7): Model Training
@@ -128,7 +125,7 @@ Train -> Trainer : Features & labels
 Trainer -> TabNet : Train with class weights
 TabNet -> Registry : Save trained model
 @enduml
-
+-------------------------------------------
 
 
 Milestone 8 (M8): Model Evaluation
@@ -149,7 +146,7 @@ System -> Test : Load test data
 Eval -> Eval : Compute metrics & plots
 Eval -> Results : Save evaluation results
 @enduml
-
+---------------------------------------------
 Milestone 9 (M9): Model Interpretability
 UC ID	Actor	Description	Trigger	Main Flow
 UC-M9-1	Analyst	Extract feature importance	Model trained	Retrieve attention-based importance
@@ -166,8 +163,7 @@ Registry -> Interp : Provide TabNet model
 Interp -> Interp : Extract feature importance
 Interp -> Insights : Store interpretability results
 @enduml
-
-
+--------------------------------------------
 Milestone 10 (M10): Insurance Cost Prediction
 UC ID	Actor	Description	Trigger	Main Flow
 UC-M10-1	System	Predict insurance cost class	New client data	Classify as high/low cost
@@ -183,7 +179,7 @@ System -> ClientDB : Load client features
 System -> Registry : Load trained model
 Predict -> Predict : Predict High/Low cost
 @enduml
-
+------------------------------------------
 Milestone 11 (M11): Decision Support & Agent Segmentation
 UC ID	Actor	Description	Trigger	Main Flow
 UC-M11-1	Insurance Analyst	Review cost predictions	Prediction results ready	Inspect risk categories
@@ -200,7 +196,7 @@ Analyst -> DSS : Request insights
 DSS -> Results : Retrieve predictions
 DSS -> Analyst : Show risk & agent segmentation
 @enduml
-
+--------------------------------------------
 
 
 
